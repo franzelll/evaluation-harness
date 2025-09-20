@@ -1,0 +1,12 @@
+seed: 42
+max_new_tokens: 160
+batch_size: 1
+output_dir: outputs
+cache_dir: .cache
+
+# Decoding-Profile: greedy (deterministisch) oder sampling
+decoding:
+  name: greedy
+  do_sample: false
+  temperature: 0.0
+  top_p: 1.0

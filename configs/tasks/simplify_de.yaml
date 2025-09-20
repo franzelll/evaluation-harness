@@ -1,0 +1,11 @@
+task_name: simplify_de
+data:
+  test_file: data/test.jsonl
+  dev_file: data/dev.jsonl
+prompt:
+  template: |
+    Vereinfache den folgenden deutschen Text in einfacher Sprache (A2-B1). Verwende kurze Sätze und vermeide Fremdwörter.
+
+    Text: {source}
+
+    Vereinfachter Text:
