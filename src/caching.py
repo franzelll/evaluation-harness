@@ -2,7 +2,9 @@ import os, json, hashlib
 
 
 def make_key(model_id: str, decoding: dict, prompt: str, ex_id: str) -> str:
-    payload = json.dumps({"m": model_id, "d": decoding, "p": prompt, "id": ex_id}, sort_keys=True)
+    payload = json.dumps(
+        {"m": model_id, "d": decoding, "p": prompt, "id": ex_id}, sort_keys=True
+    )
     return hashlib.sha1(payload.encode()).hexdigest()
 
 
