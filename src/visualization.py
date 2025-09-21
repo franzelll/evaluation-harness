@@ -159,7 +159,7 @@ def create_distribution_plots(all_metrics: Dict, output_dir: str) -> str:
     
     if not available_metrics:
         logger.warning("Keine passenden Metriken für Verteilungsplots gefunden")
-        return None
+        return ""
     
     # Plots erstellen
     n_metrics = len(available_metrics)
@@ -233,7 +233,7 @@ def create_effect_size_plot(comparison_results: Dict, output_dir: str) -> str:
     
     if not metrics:
         logger.warning("Keine gültigen Effektgrößen für Plot gefunden")
-        return None
+        return ""
     
     # Plot erstellen
     fig, ax = plt.subplots(figsize=(12, 8))
